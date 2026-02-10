@@ -1,0 +1,35 @@
+class Solution {
+    public int[] replaceElements(int[] arr) {
+      //  int[] sortedArr = new int[arr.length];
+     
+     //   sortedArr =  Arrays.sort(arr); --> doesnt work as arrays.sort doesnt return anything and changes elements inplace
+        /** sort the array in descending order and then shift left elements in array and then in last place keep "-1"
+
+         */
+
+       //  int[] sortedArr = arr.clone();
+//Arrays.sort(sortedArr);
+
+int[] oa = new int[arr.length];
+int max =Integer.MIN_VALUE;
+for(int i = 0; i< arr.length  ; i++)
+{
+    
+    if ( i < arr.length - 1)
+     max = arr[i+1];
+//     else
+// oa[arr.length-1]=-1;
+    for (int j = i+1; j< arr.length; j++)
+    {
+        
+        if(arr[j]>max)
+        max = arr[j];
+        
+    }
+oa[i] = max;
+}
+oa[arr.length-1]=-1;
+
+return oa;
+    }
+}
