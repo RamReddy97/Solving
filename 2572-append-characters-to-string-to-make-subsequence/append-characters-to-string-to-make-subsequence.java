@@ -14,6 +14,6 @@ class Solution {
             else
             i++;
         }
-        return t.length()-c;
+        return tlen-c;
     }
 }
