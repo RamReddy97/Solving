@@ -1,7 +1,7 @@
 class Solution {
     public int appendCharacters(String s, String t) {
         int c = 0; int i = 0; int j = 0;
-        int slen = s.length();
+        int slen = s.length(); // inside while loop if i use i<s.length then for every iteration calculation happens which increses timecomplexity, hence store value in a variable;
         int tlen = t.length();
         while(i<slen && j<tlen)
         {
