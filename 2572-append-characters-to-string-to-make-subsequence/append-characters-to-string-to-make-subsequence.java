@@ -14,6 +14,6 @@ class Solution {
             else
             i++;
         }
-        return t.length()-c;
+        return t.length()-c; //no issues here for using t.length as its computed just once here; so benefit is negligeable using tlen
     }
 }
