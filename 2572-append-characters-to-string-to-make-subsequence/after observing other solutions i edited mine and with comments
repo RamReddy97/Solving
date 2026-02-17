@@ -1,0 +1,19 @@
+class Solution {
+    public int appendCharacters(String s, String t) {
+         int i = 0; int j = 0;
+        int slen = s.length(); // inside while loop if i use i<s.length then for every iteration calculation happens which increses timecomplexity, hence store value in a variable;
+        int tlen = t.length();
+        while(i<slen && j<tlen)
+        {
+            if(s.charAt(i) == t.charAt(j))
+            {
+              //  c++; not needed
+               // i++; as i++ is neeed in both if and else, so write it out side
+                j++;
+            }
+            //else i++;
+            i++; 
+        }
+        return tlen-j; // j is enough here as i condition of i<s.lenght takes care and j++ happens only when match is present and 
+    }
+}
