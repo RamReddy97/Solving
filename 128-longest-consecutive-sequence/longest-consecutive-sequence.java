@@ -1,5 +1,9 @@
 class Solution {
     public int longestConsecutive(int[] nums) {
+
+        /**sort the array
+        then check for consecutive, if its broken then add the count to a new array, then in this way for all sequences i will have counts populated in new array
+        then find max of the arraylist using inbuilt function max without needing to sort --> i got from ai this part  */
         Arrays.sort(nums);
         int max = nums.length;
         int count = 1;
